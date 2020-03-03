@@ -8,11 +8,14 @@ import styles from './BlogIndexPage.module.css'
 
 function BlogIndexPage({ blogRoot, pageCount, pageNumber, postRoutes }) {
   return (
-    <div>
+    <div> 
       <header>
+        <div>
         <h1 className={styles.title}>
           <Link href={blogRoot}>{siteMetadata.title}</Link>
         </h1>
+        </div>
+        
         <Bio />
       </header>
       <ul className={styles.articlesList}>
@@ -30,13 +33,8 @@ function BlogIndexPage({ blogRoot, pageCount, pageNumber, postRoutes }) {
         />
       )}
       <footer className={styles.footer}>
-        <div>
-          <a href="/rss.xml" target="_blank" style={{ float: 'right' }}>
-            RSS
-          </a>
-          <Link href="/about">About</Link> &bull; <Link href="/tags">Tags</Link>{' '}
-          &bull;{' '}
-          <a href="https://github.com/frontarm/create-react-blog">Source</a>
+        <div>         
+          <Link href="/about">About</Link> &bull; <Link href="/tags">Tags</Link>          
         </div>
       </footer>
     </div>

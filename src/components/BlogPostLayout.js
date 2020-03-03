@@ -5,6 +5,7 @@ import siteMetadata from '../siteMetadata'
 import ArticleMeta from './ArticleMeta'
 import Bio from './Bio'
 import styles from './BlogPostLayout.module.css'
+import ShareWithOthers from './ShareWithOthers'
 
 function BlogPostLayout({ blogRoot }) {
   let { title, data, url } = useCurrentRoute()
@@ -37,12 +38,16 @@ function BlogPostLayout({ blogRoot }) {
         }}>
           <MDXComponent />
         </MDXProvider>
+       
+       <ShareWithOthers url={window.location.href} title={title}/>
+
         <footer className={styles.footer}>
           <h3 className={styles.title}>
             <Link href={blogRoot}>
               {siteMetadata.title}
             </Link>
           </h3>
+
           <Bio className={styles.bio} />
           <section className={styles.links}>
             {
@@ -60,6 +65,7 @@ function BlogPostLayout({ blogRoot }) {
           </section>
         </footer>
       </article>
+    
     </>
   )
 }

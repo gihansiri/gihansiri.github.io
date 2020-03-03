@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Bio.module.css'
 import { getGravatarURL } from '../utils/getGravatarURL'
+import myphoto from '../img/gihan.jpg'
 
 function Bio(props) {
   let photoURL = getGravatarURL({
@@ -13,19 +14,14 @@ function Bio(props) {
       ${styles.Bio}
       ${props.className || ''}
     `}>
-      <img src={photoURL} alt="Me" />
+      <a href="https://gihanrcg.github.io/" ><img src={myphoto} alt="Me" /></a>
       <p>
-        Create a blog with a single command, by{' '}
-        <a href="https://twitter.com/james_k_nelson/">James K Nelson</a>.
+        <b>Gihan Saranga Siriwardhana        </b>
         <br />
-        Themed after Gatsby's blog starter and Dan Abramov's{' '}
-        <a href="https://overreacted.io/">overreacted.io</a>.<br />
-        Based on{' '}
-        <a href="https://facebook.github.io/create-react-app/">
-          create-react-app
-        </a>
-        , <a href="https://mdxjs.com/">MDX</a>, and{' '}
-        <a href="https://frontarm.com/navi/">Navi</a>.
+        <i> Problem solver, Leader, Tech Enthusiast, Public Speaker and a student who seeks
+          opportunities to enhance and share knowledge in any way I can.</i>
+        <br />
+        <a href="https://gihanrcg.github.io/" ><b>Who am I ? </b></a>
       </p>
     </div>
   )
