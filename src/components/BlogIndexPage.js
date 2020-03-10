@@ -17,6 +17,8 @@ function BlogIndexPage({ blogRoot, pageCount, pageNumber, postRoutes }) {
         </div>
         
         <Bio />
+         <a href='https://xn--besucherzhler-counter-e2b.com/'>kostenlose Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=b51a4c09c5e3da8ff4b85532bb9a62ce583f3800'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/647191/t/0"></script>
       </header>
       <ul className={styles.articlesList}>
         {postRoutes.map(route => (

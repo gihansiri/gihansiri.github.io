@@ -7,6 +7,7 @@ import HelmetProvider from "react-navi-helmet-async";
 import "./index.module.css";
 import routes from "./routes";
 import * as serviceWorker from "./serviceWorker";
+import ReactGa from 'react-ga'
 
 // `register()` is responsible for exporting your app's pages and App
 // component to the static renderer, and for starting the app with the
@@ -31,6 +32,9 @@ register({
     // `ReactDOM.render` when it is empty.
     let hasStaticContent = process.env.NODE_ENV === "production";
     let renderer = hasStaticContent ? ReactDOM.hydrate : ReactDOM.render;
+
+    ReactGa.initialize('UA-160184286-1');
+    ReactGa.pageview(window.location.pathname);
 
     // Start react, passing in the current navigation state and
     // rendering the top-level view.
